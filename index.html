@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" 
             href="style.css">
+    <meta name="viewport"
+         content="width=device-width,intial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap">
+    <style>
     /* style.css */
-    h1 { 
+  * {
+    box-sizing: border-box;
+   }
+    /* * means every element */
+   h1 { 
         color: #c8102e;
-    }
+ }
     body{ 
         background-color: #e6f4f3; 
     }
@@ -27,8 +35,6 @@
     }
     /* sans-serif = the backup font */
     /* lrem = 16px, sp 1.5rem = 24px */
-  <p class = "note">Remminder!</p> 
-  <section id="hero">...</section>    
   /* style.css */
   .note {color: crimson;  }
   #hero { background-color: #e6f4f3; }  
@@ -37,17 +43,101 @@
   #hero {
     background-color: #e6f4f3;
   }
-    </style>
+  .card {
+    border: 2px solid #16233f;
+    padding: 24px;
+    border-radius: 8px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    min-height: 00px;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 768px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1200px) {
+    .projects { 
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  .row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  } 
+  nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0 24px;
+  }
+  /* .row = the parnet (the shelf).
+       The boxes = the children (the books). */
+  header {
+    padding: 24px;
+    border-bottom: 4px solid #0e9c93;
+    margin-bottom: 32px;
+  }
+  footer {
+    padding: 16px;
+    border-top: 1px solid #16233f;
+    margin-top: 32px;
+  } 
+  .gallery {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  /* lfr = one equal slice,
+      like slicing a pizza */
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  /* phone first: 1 column */
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  /* + one more at 1200px: 3 columns */
+  @media (min-width: 1200px) {
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+.page {
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer footer";
+} 
+</style>
 </head>
 <body>
     <header>
-        <h1>Hi,I'm keya johnson</h1>
+        <h1>Hi, I'm Keya Johnson</h1>
     </header>
          <nav>
              <a href="#about">About Me</a>
              <a href="#hobbies">My Hobbies</a>
              <a href="https://github.com" target="_blank">My GitHub</a>
-             <a href="path/myfirstwebsite.html" target="_blank">path</a>
+             <a href="path/myfirstwebsite.html" target="_blank">home</a>
          </nav>
     <main>
         <section id="about">
@@ -64,9 +154,9 @@
         </section>
     </main>
     <footer>
-        <p>My Cat</p>
-        <img src="image/patches.jpg" 
-                    alt="Patches laying down, on my lap." width="720" height="1280">
+        <p>Patches</p>
+        <img src="./pictures/patches.jpg" 
+                    alt="Patches laying down, on my lap." width="720" height="1280" title="Patches">
     </footer>
 </body>
 </html>
