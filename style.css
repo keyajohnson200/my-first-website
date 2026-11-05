@@ -46,7 +46,6 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  /* + one more at 1200px: 3 columns */
   .row {
     display: flex;
     gap: 16px;
