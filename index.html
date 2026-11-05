@@ -59,14 +59,17 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  @media (min-width: 768px)
+  @media (min-width: 768px) {
     .projects {
       grid-template-columns: repeat(2, 1fr);
     }
-  @media (min-width: 1200px) 
+  }
+  @media (min-width: 1200px) {
     .projects { 
       grid-template-columns: repeat(3, 1fr); 
     }
+  } 
+  /* + one more at 1200px: 3 columns */
   .row {
     display: flex;
     gap: 16px;
@@ -107,15 +110,7 @@
   .projects {
     grid-template-columns: 1fr;
   }
-  @media (min-width: 768px) 
-    .projects {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  /* + one more at 1200px: 3 columns */
-  @media (min-width: 1200px) 
-    .projects {
-      grid-template-columns: repeat(3, 1fr);
-    }
+ 
 .page {
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
