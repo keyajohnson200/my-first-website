@@ -94,9 +94,9 @@
   .page {
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
-    "header     header"
-    "main       sidebar"
-    "footer     footer";
+    "header       header"
+    "main         sidebar"
+    "footer       footer";
   }
   main { grid-area: main; }
   aside { grid-area: sidebar; }
