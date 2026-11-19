@@ -59,11 +59,11 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  /* phone first: 1 column */ 
   @media (min-width: 768px) {
     .projects {
       grid-template-columns: repeat(2, 1fr);
     }
+     /* phone first: 1 column */ 
   }
   /* + one more at 1200px: 3 columns */
   @media (min-width: 1200px) {
@@ -112,13 +112,12 @@
 .page {
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
-    "header       header"
-    "main         sidebar"
-    "footer       footer";
+    "header     header"
+    "main       sidebar"
+    "footer     footer";
 } 
 main { grid-area: main; }
 aside { grid-area: sidebar; }
-
 </style>
 </head>
 <body>
@@ -132,29 +131,28 @@ aside { grid-area: sidebar; }
              <a href="path/myfirstwebsite.html" target="_blank">home</a>
          </nav>
     <main>
+      <article>
         <section id="about">
-          <article>
             <h2>About me</h2>
             <p>I am up to learn more about web development.</p>
-         </article> 
         </section>
+      </article>
+      <article>  
         <section id="hobbies">
-          <article>
             <h3>My Hobbies</h3>
             <ul>
                 <li>Reading books</li>
                 <li>Gaming</li>
                 <li>Exploring new technologies</li>
             </ul>
-          </article>
         </section>
+     </article>
     </main>
     <footer>
         <p>Patches</p>
         <img src="./pictures/patches.jpg" 
                     alt="Patches laying down, on my lap." width="720" height="1280" title="Patches">
     </footer>
-</body>
 <div class="container">
   <header>Header</header>
   <main>
@@ -174,10 +172,7 @@ aside { grid-area: sidebar; }
     <h1>Main</h1>
     <p>Main content…</p>
   </main>
-  <aside>  
-    <h2>Aside</h2>
-    <p>Related content</p>
-  </aside>
   <footer>footer</footer>
-</div>  
+</div> 
+</body>
 </html>
